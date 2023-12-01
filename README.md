@@ -61,7 +61,7 @@ La creación y ejecución del ecosistema de infraestructura fue dado con:
 
 Antes de comenzar, asegúrate de revisar la documentación detallada de AWS para cada servicio utilizado y sigue las mejores prácticas de seguridad y gestión de recursos en la nube.
 
-1. Una vez teniendo aws-cli, realizar la configuración de las credenciales. Se puede hacer con el comando `aws configure`, colocando los datos de su cuenta en los campos: AWS Access Key ID y AWS Secret Access Key y AWS Region. Si no cuenta con ellos debe ir primero a la consola de AWS en su cuenta y dentro del servicio IAM en el apartado My security credentials, crearlas.
+1. Una vez teniendo aws-cli, realizar la configuración de las credenciales. Se puede hacer con el comando `aws configure`, colocando los datos de su cuenta en los campos: `AWS Access Key ID`, `AWS Secret Access Key` y `AWS Region`. Si no cuenta con ellos debe ir primero a la consola de AWS en su cuenta y dentro del servicio IAM en el apartado My security credentials, crearlas. Verifique su archivo de credenciales en `.aws/credentials`.
 (Garantizar tener un usuario con acceso a AWS y permisos suficientes para crear recursos.)
 
 ![img1.png](images%2Fimg1.png)
