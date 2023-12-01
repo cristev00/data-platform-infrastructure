@@ -1,11 +1,9 @@
 
-
-
 # Plataforma de Datos en la Nube 🌐
 
 ¡Bienvenido a la Plataforma de Datos en la Nube! Este proyecto proporciona una solución robusta y eficiente desplegada en la nube con tecnologías líderes de AWS.
 
-# Tecnologias 🤖
+## Tecnologias 🤖
 
 - VPC (Red virtual)
 - IAM (Administración de identidades y accesos)
@@ -19,16 +17,9 @@
 
 ## Visión General 👁️
 
-_Glue_
+Este workflow procesará archivos crudos alojados en s3 mediante una ETL en glue, el job y el crawler serviran para leer nuestros datos crudos y, de esta forma, inferir el esquema de los mismo, colocando la data también en la instancia de RDS. La demás infraestructura se adapta a las necesidades del negocio y de cubrir lo más posible aplicando seguridad, versatibilidad y flexibilidad.
 
-1. Catalog Database Esta base de datos guardará los esquemas de los datos crudos que se subieron a AWS S3+
-   El crawler, sirve para leer nuestros datos crudos y, de esta forma, inferir el esquema de los mismos.
-   La salida del rastreador debe guardarse en una base de datos. Es decir, las tablas y los esquemas que el rastraeador decte.
-
-tipo Data target sirven para escribir la información de Glue, sea en una base de datos de registrada en Glue o directamente en AWS S3
-
-
-# Arquitectura 👷‍♂️
+## Arquitectura 👷‍♂️
 
 La plataforma está diseñada para ofrecer por  medio de la creación de la infraestructura administrada por Terraform, lo siguiente:
 
@@ -45,9 +36,9 @@ La plataforma está diseñada para ofrecer por  medio de la creación de la infr
 
  _En base a esto, en la siguiente figura se muestran las tecnologias creadas y su relación en un entorno real:_
 
+![arquitectura.png](images%2Farquitectura.png)
 
-
-# Puesta en marcha 🥊
+## Puesta en marcha 🥊
 
 Para poner en marcha, sigue estos simples pasos:
 
@@ -73,23 +64,20 @@ Antes de comenzar, asegúrate de revisar la documentación detallada de AWS para
 1. Una vez teniendo aws-cli, realizar la configuración de las credenciales. Se puede hacer con el comando `aws configure`, colocando los datos de su cuenta en los campos: AWS Access Key ID y AWS Secret Access Key y AWS Region. Si no cuenta con ellos debe ir primero a la consola de AWS en su cuenta y dentro del servicio IAM en el apartado My security credentials, crearlas.
 (Garantizar tener un usuario con acceso a AWS y permisos suficientes para crear recursos.)
 
-![img_1.png](images/img1.png)
-
-<span>![</span><span>Aquí la descripción de la imagen por si no carga</span><span>]</span><span>(</span><span>https://raw.githubusercontent.com/cristev00/data-platform-infrastructure/main/images/img1.png</span><span>)</span>
+![img1.png](images%2Fimg1.png)
 
 2. Luego de tener las credenciales activas, se debe garantizar tener el repositorio o directorio `data-platform-infrastructure` en su local. 
 3. Dentro del directorio anterior, parado en la raiz, realizar `terraform init`
 4. Luego de la correcta validación del estado y los recursos, realizar `terraform apply -var-file pwd.tfvars`
 5. Evaluar el plan que entrega terraform y digitar `yes` para proceder con la creación
-6. Después de tener la correcta aplicación de 25 recursos, ya la infraestuctura estára provisionada en la región de us-east-1 en su cuenta AWS. (La creación de la instancia de RDS puede tardar aproximadamente minutos)
+6. Después de tener la correcta aplicación de 25 recursos, ya la infraestuctura estára provisionada en la región de us-east-1 en su cuenta AWS. (La creación de la instancia de RDS puede tardar aproximadamente 10 minutos)
 
-![img.png](images/img2.png)
+![img2.png](images%2Fimg2.png)
 
 7. Una vez hecho esto puede ir a su consola AWS y comprobar toda la infrastructura creada.
 8. Se recomienda una vez terminada la revisión lanzar desde la raiz del proyecto el comando `terraform destroy -auto-approve -var-file pwd.tfvars` para eliminar la infraestructura y no caer en gastos adicionales en la facturación. 
 
-![img.png](images/img3.png)
-
+![img3.png](images%2Fimg3.png)
 
 ## Estrategia de Despliegue 🌀
 
