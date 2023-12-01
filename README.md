@@ -75,6 +75,8 @@ Antes de comenzar, asegúrate de revisar la documentación detallada de AWS para
 
 ![img_1.png](images/img1.png)
 
+<span>![</span><span>Aquí la descripción de la imagen por si no carga</span><span>]</span><span>(</span><span>https://raw.githubusercontent.com/cristev00/data-platform-infrastructure/main/images/img1.png</span><span>)</span>
+
 2. Luego de tener las credenciales activas, se debe garantizar tener el repositorio o directorio `data-platform-infrastructure` en su local. 
 3. Dentro del directorio anterior, parado en la raiz, realizar `terraform init`
 4. Luego de la correcta validación del estado y los recursos, realizar `terraform apply -var-file pwd.tfvars`
