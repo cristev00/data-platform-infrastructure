@@ -90,5 +90,3 @@ Otra estrategia de despliegue automaticó a implementar, es crear un archivo con
 ¡Contribuciones son bienvenidas! Si encuentras algún problema o tienes alguna mejora que sugerir, por favor abre un problema o envía una solicitud.
 
 ---
-
-**Nota:** Este README es solo un punto de partida. ¡Personalízalo según las necesidades específicas! 🎨
